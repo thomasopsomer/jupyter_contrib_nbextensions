@@ -23,7 +23,7 @@ define([
     });
 
     // will be called when the nbextension is loaded
-    function load_extensiobase_urln() {
+    function load_extension() {
         config.load(); // trigger loading config parameters
 
         $.getJSON("/nbextensions/snippets/snippets.json", function(data) {
