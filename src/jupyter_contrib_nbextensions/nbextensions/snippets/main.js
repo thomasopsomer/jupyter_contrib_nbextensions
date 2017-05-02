@@ -26,7 +26,7 @@ define([
     function load_extension() {
         config.load(); // trigger loading config parameters
 
-        $.getJSON("/nbextensions/snippets/snippets.json", function(data) {
+        $.getJSON(base_url + "/nbextensions/snippets/snippets.json", function(data) {
             // Add the header as the top option, does nothing on click
             var option = $("<option></option>")
                          .attr("id", "snippet_header")
