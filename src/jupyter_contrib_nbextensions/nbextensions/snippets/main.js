@@ -11,7 +11,7 @@ define([
 
     // create config object to load parameters
     // var base_url = utils.get_body_data("baseUrl");
-    var base_urm = Jupyter.notebook.base_url
+    var base_url = Jupyter.notebook.base_url
     var config = new configmod.ConfigSection('notebook', {base_url: base_url});
 
     config.loaded.then(function() {
@@ -23,7 +23,7 @@ define([
     });
 
     // will be called when the nbextension is loaded
-    function load_extension() {
+    function load_extensiobase_urln() {
         config.load(); // trigger loading config parameters
 
         $.getJSON("/nbextensions/snippets/snippets.json", function(data) {
